@@ -1,0 +1,11 @@
+service: "serving/bentoml_service.py:svc"
+include:
+  - "serving/"
+  - "models/"
+python:
+  packages:
+    - pandas
+    - numpy
+    - scikit-learn
+    - joblib
+    - pydantic

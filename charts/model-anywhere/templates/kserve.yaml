@@ -1,0 +1,14 @@
+{{- if .Values.kserve.enabled }}
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: model-anywhere
+  namespace: {{ .Values.namespace }}
+spec:
+  predictor:
+    containers:
+      - name: predictor
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+          - containerPort: {{ .Values.containerPort }}
+{{- end }}

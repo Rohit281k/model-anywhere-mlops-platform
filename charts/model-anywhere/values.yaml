@@ -1,0 +1,13 @@
+image:
+  repository: rohit1k/model-anywhere-mlops
+  tag: latest
+replicaCount: 2
+namespace: mlops
+containerPort: 3000
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  cpu: 60
+kserve:
+  enabled: false

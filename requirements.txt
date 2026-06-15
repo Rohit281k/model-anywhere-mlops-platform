@@ -1,0 +1,14 @@
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+mlflow==2.14.3
+bentoml==1.2.19
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.8.2
+joblib==1.4.2
+pyyaml==6.0.2
+evidently==0.4.30
+great-expectations==0.18.21
+feast==0.40.1
+kfp==2.7.0

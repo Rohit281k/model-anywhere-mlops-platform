@@ -1,0 +1,10 @@
+project:
+  name: model-anywhere-mlops-platform
+model:
+  type: sklearn_random_forest
+  registered_name: universal_mlops_model
+  random_state: 42
+  test_size: 0.2
+monitoring:
+  drift_threshold: 0.20
+  confidence_drop_threshold: 0.15

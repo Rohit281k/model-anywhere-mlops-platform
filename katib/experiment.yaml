@@ -1,0 +1,32 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Experiment
+metadata:
+  name: model-anywhere-katib
+  namespace: kubeflow
+spec:
+  objective:
+    type: maximize
+    objectiveMetricName: weighted_f1
+  algorithm:
+    algorithmName: random
+  maxTrialCount: 5
+  parallelTrialCount: 2
+  parameters:
+    - name: n_estimators
+      parameterType: int
+      feasibleSpace:
+        min: "50"
+        max: "300"
+  trialTemplate:
+    primaryContainerName: training-container
+    trialSpec:
+      apiVersion: batch/v1
+      kind: Job
+      spec:
+        template:
+          spec:
+            containers:
+              - name: training-container
+                image: rohit1k/model-anywhere-mlops:latest
+                command: ['python','src/training/train.py']
+            restartPolicy: Never
