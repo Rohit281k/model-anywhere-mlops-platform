@@ -1,4 +1,4 @@
-# Model Anywhere MLOps Platform
+# Modelforge - MLOps Platform
 
 A production-style open-source MLOps platform where you can plug in **any ML model** and run the full lifecycle:
 
@@ -221,7 +221,7 @@ Evidently/NannyML alert JSON -> retraining trigger -> DVC/Kubeflow pipeline -> M
 
 ---
 
-## Resume description
+## Description
 
 ```text
 Designed a reusable open-source MLOps platform to deploy any ML model through a full production lifecycle using DVC, lakeFS, Great Expectations, Feast, MLflow Registry, Kubeflow, Katib, BentoML, Docker, Kubernetes, KServe, HPA, Evidently, NannyML-style alerts, Prometheus/Grafana, Helm and Argo CD for automated training, serving, monitoring, drift detection and retraining.
